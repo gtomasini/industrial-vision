@@ -1,0 +1,3 @@
+-ver que pasa cuando l>10;
+-ver de guardar la media en alguna parte.
+-que reconozca perno brillante.

@@ -1,0 +1,11 @@
+data/polys.cc.i
+data/main.cc.i
+data/makefile.i
+data/polys.h.i
+data/NNmain.cc.i
+data/dataReader.cc.i
+data/dataReader.h.i
+data/neuralNetwork.cc.i
+data/neuralNetwork.h.i
+data/neuralNetworkTrainer.cc.i
+data/neuralNetworkTrainer.h.i

@@ -1,0 +1,151 @@
+\hypertarget{classpolys}{
+\section{polys Class Reference}
+\label{classpolys}\index{polys@{polys}}
+}
+{\tt \#include $<$polys.h$>$}
+
+\subsection*{Public Member Functions}
+\begin{CompactItemize}
+\item 
+\hyperlink{classpolys_5bca1e7b11049a71f581d8a42121cddb}{polys} (const char $\ast$fname, const CvPoint \&p0, const CvPoint \&p1, int K=4, int delay=1000, int sides=4)
+\item 
+CvSeq $\ast$ \hyperlink{classpolys_150df3ed5aaef122960c7050c6ceea11}{findObject} (double area)
+\item 
+CvSeq $\ast$ \hyperlink{classpolys_a8e9ae3faba2b964f75920f31384f3eb}{findSquares4} (const int thresh=50, const int N=11)
+\item 
+void \hyperlink{classpolys_ee69339d22923e16be105533518c8c01}{drawPolys} ()  throw (polysError)
+\item 
+void \hyperlink{classpolys_a858294eddc4fe0f9a6e1292e9687249}{matrix} ()
+\item 
+void \hyperlink{classpolys_e6a62f459667bbb2ff27dd0b89b07cd6}{getSign} (const std::vector$<$ CvPoint $\ast$ $>$ \&ptV, std::vector$<$ std::vector$<$ float $>$ $>$ \&deltaVV)
+\item 
+void \hyperlink{classpolys_e0bab6a2070d9c92290bdc84e02d0ebc}{matrixPaint} (const std::vector$<$ std::vector$<$ float $>$ $>$ \&deltaVV, const std::string \&filename)
+\item 
+void \hyperlink{classpolys_87d1385def6b1b43d713ac19403d5c08}{matrix2csv} (const std::vector$<$ std::vector$<$ float $>$ $>$ \&deltaVV, const std::string \&filename)
+\item 
+void \hyperlink{classpolys_a47d2d9725c7d2c3686c410d8b536ad7}{findPoints} (const CvSeq $\ast$contorno, int n, std::vector$<$ CvPoint $\ast$ $>$ \&ptV)
+\end{CompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{classpolys}{polys}
+
+Con esta clase se logra todo el procesamiento de la imagen (jpg) para identificar el objeto geometricamente y generar la firma (matriz) caracteristica. Dicha matriz sera la entrada de la red neuronal. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{classpolys_5bca1e7b11049a71f581d8a42121cddb}{
+\index{polys@{polys}!polys@{polys}}
+\index{polys@{polys}!polys@{polys}}
+\subsubsection[{polys}]{\setlength{\rightskip}{0pt plus 5cm}polys::polys (const char $\ast$ {\em fname}, \/  const CvPoint \& {\em p0}, \/  const CvPoint \& {\em p1}, \/  int {\em K} = {\tt 4}, \/  int {\em delay} = {\tt 1000}, \/  int {\em sides} = {\tt 4})}}
+\label{classpolys_5bca1e7b11049a71f581d8a42121cddb}
+
+
+Constructor
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em fname}]archivo jpg conteniendo el objeto \item[{\em p0}]junto con p1 forma un rectangulo del cual se muestrea el tono del objeto \item[{\em p1}]junto con p0 forma un rectandulo del cual se muestrea el tono del objeto \item[{\em K}]sigma se usa para filtrar el nivel de intensidad de color \item[{\em delay}]tiempo que se demora mostrando una imagen \item[{\em sides}]depreciado \end{description}
+\end{Desc}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{classpolys_ee69339d22923e16be105533518c8c01}{
+\index{polys@{polys}!drawPolys@{drawPolys}}
+\index{drawPolys@{drawPolys}!polys@{polys}}
+\subsubsection[{drawPolys}]{\setlength{\rightskip}{0pt plus 5cm}void polys::drawPolys ()  throw (polysError)}}
+\label{classpolys_ee69339d22923e16be105533518c8c01}
+
+
+depreciada \hypertarget{classpolys_150df3ed5aaef122960c7050c6ceea11}{
+\index{polys@{polys}!findObject@{findObject}}
+\index{findObject@{findObject}!polys@{polys}}
+\subsubsection[{findObject}]{\setlength{\rightskip}{0pt plus 5cm}CvSeq $\ast$ polys::findObject (double {\em area})}}
+\label{classpolys_150df3ed5aaef122960c7050c6ceea11}
+
+
+retorna el objeto del archivo como una CvSeq
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em area}]area aproximada minima del objeto, con esto se pueden discriminar contornos\end{description}
+\end{Desc}
+\begin{Desc}
+\item[Returns:]la secuencia del contorno del objeto \end{Desc}
+\hypertarget{classpolys_a47d2d9725c7d2c3686c410d8b536ad7}{
+\index{polys@{polys}!findPoints@{findPoints}}
+\index{findPoints@{findPoints}!polys@{polys}}
+\subsubsection[{findPoints}]{\setlength{\rightskip}{0pt plus 5cm}void polys::findPoints (const CvSeq $\ast$ {\em contorno}, \/  int {\em n}, \/  std::vector$<$ CvPoint $\ast$ $>$ \& {\em ptV})}}
+\label{classpolys_a47d2d9725c7d2c3686c410d8b536ad7}
+
+
+encuentra n puntos del contorno de la figura contorno y devuelve n puntos \char`\"{}muestreados\char`\"{} equidistantes
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em contorno}]CvSeq del contorno del objeto de marras \item[{\em ptV}]vector de CvPoint con el contorno \char`\"{}muestreado\char`\"{} \end{description}
+\end{Desc}
+\hypertarget{classpolys_a8e9ae3faba2b964f75920f31384f3eb}{
+\index{polys@{polys}!findSquares4@{findSquares4}}
+\index{findSquares4@{findSquares4}!polys@{polys}}
+\subsubsection[{findSquares4}]{\setlength{\rightskip}{0pt plus 5cm}CvSeq$\ast$ polys::findSquares4 (const int {\em thresh} = {\tt 50}, \/  const int {\em N} = {\tt 11})}}
+\label{classpolys_a8e9ae3faba2b964f75920f31384f3eb}
+
+
+depreciada \hypertarget{classpolys_e6a62f459667bbb2ff27dd0b89b07cd6}{
+\index{polys@{polys}!getSign@{getSign}}
+\index{getSign@{getSign}!polys@{polys}}
+\subsubsection[{getSign}]{\setlength{\rightskip}{0pt plus 5cm}void polys::getSign (const std::vector$<$ CvPoint $\ast$ $>$ \& {\em ptV}, \/  std::vector$<$ std::vector$<$ float $>$ $>$ \& {\em deltaVV})}}
+\label{classpolys_e6a62f459667bbb2ff27dd0b89b07cd6}
+
+
+obtiene la firma del objeto.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em ptv}]vector de puntos representando el objeto \item[{\em deltaVV}]vector devuelto representando la matriz (firma) \end{description}
+\end{Desc}
+\hypertarget{classpolys_a858294eddc4fe0f9a6e1292e9687249}{
+\index{polys@{polys}!matrix@{matrix}}
+\index{matrix@{matrix}!polys@{polys}}
+\subsubsection[{matrix}]{\setlength{\rightskip}{0pt plus 5cm}void polys::matrix ()}}
+\label{classpolys_a858294eddc4fe0f9a6e1292e9687249}
+
+
+depreciada \hypertarget{classpolys_87d1385def6b1b43d713ac19403d5c08}{
+\index{polys@{polys}!matrix2csv@{matrix2csv}}
+\index{matrix2csv@{matrix2csv}!polys@{polys}}
+\subsubsection[{matrix2csv}]{\setlength{\rightskip}{0pt plus 5cm}void polys::matrix2csv (const std::vector$<$ std::vector$<$ float $>$ $>$ \& {\em deltaVV}, \/  const std::string \& {\em filename})}}
+\label{classpolys_87d1385def6b1b43d713ac19403d5c08}
+
+
+convierte la matriz a formato csv para ser recogida luego por la red neuronal
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em deltaVV}]matriz \item[{\em filename}]nombre del archivo .csv generado \end{description}
+\end{Desc}
+\hypertarget{classpolys_e0bab6a2070d9c92290bdc84e02d0ebc}{
+\index{polys@{polys}!matrixPaint@{matrixPaint}}
+\index{matrixPaint@{matrixPaint}!polys@{polys}}
+\subsubsection[{matrixPaint}]{\setlength{\rightskip}{0pt plus 5cm}void polys::matrixPaint (const std::vector$<$ std::vector$<$ float $>$ $>$ \& {\em deltaVV}, \/  const std::string \& {\em filename})}}
+\label{classpolys_e0bab6a2070d9c92290bdc84e02d0ebc}
+
+
+pinta la matriz firma en un jpg.
+
+\begin{Desc}
+\item[Parameters:]
+\begin{description}
+\item[{\em deltaVV}]vector matriz firma \item[{\em filename}]nombre de archivo generado jpg. \end{description}
+\end{Desc}
+
+
+The documentation for this class was generated from the following files:\begin{CompactItemize}
+\item 
+polys.h\item 
+polys.cc\end{CompactItemize}

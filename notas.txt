@@ -1,0 +1,64 @@
+12-03-2008
+
+Sistemas de bloques
+etiquetado
+
+tarea:
+ventana de la mesa para sacar media de colores:
+ej:
+   (300,200) a (400,400)
+   
+-sigma, estadìsticamente
+-operaciòn de filtrado (morfologico) erosiòn?
+-reveer segmentaciòn: canny (detecccion bordes), 
+
+
+19-03-2008:
+-archivo configuracion
+-cvclose:
+      MorphologyEx
+-Aproximar con poligonal y quedarme con la misma, y decido cual me sirve
+
+18-03-2008:
+OpenCV: Funciones Interesantes:
+
+26-03-2008
+-obtener vertices
+
+Threshold
+
+Applies fixed-level threshold to array elements
+
+void cvThreshold( const CvArr* src, CvArr* dst, double threshold,
+                  double max_value, int threshold_type );
+
+
+AdaptiveThreshold
+
+Applies adaptive threshold to array
+
+void cvAdaptiveThreshold( const CvArr* src, CvArr* dst, double max_value,
+                          int adaptive_method=CV_ADAPTIVE_THRESH_MEAN_C,
+                          int threshold_type=CV_THRESH_BINARY,
+                          int block_size=3, double param1=5 );
+						  
+
+FindContours
+
+Finds contours in binary image
+
+int cvFindContours( CvArr* image, CvMemStorage* storage, CvSeq** first_contour,
+                    int header_size=sizeof(CvContour), int mode=CV_RETR_LIST,
+                    int method=CV_CHAIN_APPROX_SIMPLE, CvPoint offset=cvPoint(0,0) );
+
+
+Canny
+
+Implements Canny algorithm for edge detection
+
+void cvCanny( const CvArr* image, CvArr* edges, double threshold1,
+              double threshold2, int aperture_size=3 );
+
+The function cvCanny finds the edges on the input image image and marks them in the 
+output image edges using the Canny algorithm. The smallest of threshold1 and threshold2 
+is used for edge linking, the largest - to find initial segments of strong edges.

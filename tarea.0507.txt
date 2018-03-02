@@ -1,0 +1,8 @@
+-hacer que el programa grafique :
+meter los cocientes en una matriz:
+filas:vertices
+col:combinaciones de cocientes
+mostrarla
+normalizarla
+resizing 
+mostrar

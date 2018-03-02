@@ -1,0 +1,55 @@
+//Sin Canny
+winLevel(200,180,340,205): media=58.6846, sigma=7.68906
+winLevel(200,180,340,205): media=57.0286, sigma=9.22718
+winLevel(200,180,340,205): media=60.7323, sigma=10.2007
+antes de Canny
+luego de Canny
+#contornos encontrados=3
+ area:-18563.5
+se cumple condicion de area!
+findPoints().
+perimetro:770.978, delta:38.5489
+1. perim Parcial acumulado=1.41421, nuevo limite=38.5489
+(163, 117) 
+2. perim Parcial acumulado=39.3848, nuevo limite=77.0978
+(146, 145) 
+3. perim Parcial acumulado=77.2132, nuevo limite=115.647
+(144, 182) 
+4. perim Parcial acumulado=116.627, nuevo limite=154.196
+(147, 219) 
+5. perim Parcial acumulado=154.355, nuevo limite=192.744
+(167, 236) 
+6. perim Parcial acumulado=194.083, nuevo limite=231.293
+(188, 212) 
+7. perim Parcial acumulado=231.326, nuevo limite=269.842
+(224, 211) 
+8. perim Parcial acumulado=270.154, nuevo limite=308.391
+(262, 209) 
+9. perim Parcial acumulado=309.054, nuevo limite=346.94
+(298, 210) 
+10. perim Parcial acumulado=347.539, nuevo limite=385.489
+(334, 212) 
+11. perim Parcial acumulado=386.439, nuevo limite=424.038
+(370, 215) 
+12. perim Parcial acumulado=424.752, nuevo limite=462.587
+(405, 215) 
+13. perim Parcial acumulado=462.652, nuevo limite=501.135
+(416, 184) 
+14. perim Parcial acumulado=502.38, nuevo limite=539.684
+(403, 154) 
+15. perim Parcial acumulado=540.208, nuevo limite=578.233
+(366, 152) 
+16. perim Parcial acumulado=578.865, nuevo limite=616.782
+(329, 154) 
+17. perim Parcial acumulado=617.693, nuevo limite=655.331
+(291, 152) 
+18. perim Parcial acumulado=655.35, nuevo limite=693.88
+(255, 150) 
+19. perim Parcial acumulado=694.593, nuevo limite=732.429
+(217, 147) 
+20. perim Parcial acumulado=733.078, nuevo limite=770.978
+(189, 133) 
+termino la vuelta!
+
+mayor=68.5413, deltaV.size():20
+tf-t0=1
